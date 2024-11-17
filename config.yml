@@ -1,0 +1,25 @@
+recipe: default.v1
+language: vi
+pipeline:
+- name: WhitespaceTokenizer
+- name: CountVectorsFeaturizer
+- name: CountVectorsFeaturizer
+  analyzer: char_wb
+  min_ngram: 1
+  max_ngram: 4
+- name: LogisticRegressionClassifier
+  max_iter: 500
+  solver: lbfgs
+  tol: 0.0001
+  random_state: 42
+  ranking_length: 10
+- name: NLUCommandAdapter
+- name: SingleStepLLMCommandGenerator
+  llm:
+    model_name: gpt-4o-mini
+
+policies:
+- name: FlowPolicy
+#  - name: EnterpriseSearchPolicy
+#  - name: RulePolicy
+assistant_id: 20241116-190810-symmetric-pizza

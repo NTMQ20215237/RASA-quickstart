@@ -1,0 +1,170 @@
+flows:
+  transfer_money:
+    description: This flow lets users send money to friends and family.
+    steps:
+      - collect: recipient
+      - collect: amount
+        description: the number of US dollars to send
+      - action: utter_transfer_complete
+    
+  general:
+    description: Flow này để xử lý câu hỏi về general và trả lời về general
+    nlu_trigger:
+      - intent:
+          name: ask_about_general
+          confidence_threshold: 0.8
+    steps:
+      - action: utter_about_general
+
+  IT1:
+    description: Flow này để xử lý câu hỏi về thông tin ngành IT1 và trả lời
+    nlu_trigger:
+      - intent:
+          name: ask_about_IT1
+          confidence_threshold: 0.8
+    steps:
+      - action: utter_about_IT1
+
+  IT2:
+    description: Flow này để xử lý câu hỏi về thông tin ngành IT2 và trả lời
+    nlu_trigger:
+      - intent:
+          name: ask_about_IT2
+          confidence_threshold: 0.8
+    steps:
+      - action: utter_about_IT2
+
+  ITe7:
+    description: Flow này để xử lý câu hỏi về thông tin ngành ITe7 và trả lời
+    nlu_trigger:
+      - intent:
+          name: ask_about_ITe7
+          confidence_threshold: 0.8
+    steps:
+      - action: utter_about_ITe7
+
+  ITe6:
+    description: Flow này để xử lý câu hỏi về thông tin ngành ITe6(Global ICT/ Công Nghệ Thông Tin Toàn Cầu) và trả lời
+    nlu_trigger:
+      - intent:
+          name: ask_about_ITe6
+          confidence_threshold: 0.8
+    steps:
+      - action: utter_about_ITe6
+
+  ITe10:
+    description: Flow này để xử lý câu hỏi về thông tin ngành ITe10 và trả lời
+    nlu_trigger:
+      - intent:
+          name: ask_about_ITe10
+          confidence_threshold: 0.8
+    steps:
+      - action: utter_about_ITe10
+
+  ITe15:
+    description: Flow này để xử lý câu hỏi về thông tin ngành ITe15 và trả lời
+    nlu_trigger:
+      - intent:
+          name: ask_about_ITe15
+          confidence_threshold: 0.8
+    steps:
+      - action: utter_about_ITe15
+
+  compare_it1_it2:
+    description: Flow này để xử lý câu hỏi và trả lời về yêu cầu so sánh ngành IT1(Khoa học máy tính) và IT2 (Kỹ thuật máy tính)
+    nlu_trigger:
+      - intent:
+          name: compare_it1_it2
+          confidence_threshold: 0.8
+    steps:
+      - action: utter_compare_it1_it2
+
+  compare_ite6_ite7:
+    description: Flow này để xử lý câu hỏi và trả lời về yêu cầu so sánh ngành ITe7(Global ICT) và ITe6 (Công nghệ thông tin Việt Nhật)
+    nlu_trigger:
+      - intent:
+          name: compare_ite6_ite7
+          confidence_threshold: 0.8
+    steps:
+      - action: utter_compare_ite6_ite7
+
+  department_block_D07_has_IT_or_not:
+    description: Flow này để xử lý câu hỏi và trả lời những thắc mắc về việc thi khối môn D07 bao gồm Toán, Hóa, Anh có được xét duyệt điểm cho những ngành Công Nghệ thông tin của Đại học Bách Khoa hay không
+    nlu_trigger:
+      - intent:
+          name: block_D07_has_IT_or_not
+          confidence_threshold: 0.8
+    steps:
+      - action: utter_department_block_D07_has_IT_or_not
+
+  university_curriculum_is_highly_expected:
+    description: Flow này để xử lý câu hỏi và trả lời những thắc mắc về những ngành trong Đại học Bách khoa có triển vọng về công việc và mức lương cao
+    nlu_trigger:
+      - intent:
+          name: curriculum_is_highly_expected
+          confidence_threshold: 0.8
+    steps:
+      - action: utter_university_curriculum_is_highly_expected
+
+  about_foreign_lecturers:
+    description: Flow này để xử lý câu hỏi và trả lời những thắc mắc về việc được học và tham gia các lớp do giáo viên là người nước ngoài giảng dạy
+    nlu_trigger:
+      - intent:
+          name: foreign_lecturers
+          confidence_threshold: 0.8
+    steps:
+      - action: utter_foreign_lecturers
+
+  about_women_in_IT:
+    description: Flow này để xử lý câu hỏi và trả lời những thắc mắc về việc con gái hay phái nữ có thích hợp để có thể theo đuổi ngành Công Nghệ Thông Tin hay không
+    nlu_trigger:
+      - intent:
+          name: women_in_IT
+          confidence_threshold: 0.8
+    steps:
+      - action: utter_women_in_IT
+
+  about_foreign_language_requirements:
+    description: Flow này để xử lý câu hỏi và trả lời những thắc mắc về việc yêu cầu đầu vào cho Ngoại Ngữ (Tiếng Anh, Tiếng Nhật,...) của các môn học thuộc nhóm ngành Công Nghệ Thông Tin tại Bách Khoa
+    nlu_trigger:
+      - intent:
+          name: foreign_language_requirements
+          confidence_threshold: 0.8
+    steps:
+      - action: utter_foreign_language_requirements
+
+  about_compare_university_curriculum_to_others:
+    description: Flow này để xử lý câu hỏi và trả lời những thắc mắc sự khác nhau về chương trinh giảng dạy giữa các nhóm ngành thuộc Công Nghệ Thông Tin của Đại học Bách Khoa Hà Nội.
+    nlu_trigger:
+      - intent:
+          name: compare_university_curriculum_to_others
+          confidence_threshold: 0.8
+    steps:
+      - action: utter_compare_university_curriculum_to_others
+
+  about_programming_career_orientation:
+    description: Flow này để xử lý câu hỏi và trả lời những thắc mắc về định hướng nghề nghiệp về các mảng trong ngành khi học Công nghệ thông tin 
+    nlu_trigger:
+      - intent:
+          name: programming_career_orientation
+          confidence_threshold: 0.8
+    steps:
+      - action: utter_programming_career_orientation
+
+  about_layoff:
+    description: Flow này để xử lý câu hỏi và trả lời những thắc mắc việc sa thải nhiều nhân sự trong nhóm ngành Công Nghệ Thông Tin gần đây.
+    nlu_trigger:
+      - intent:
+          name: layoff
+          confidence_threshold: 0.8
+    steps:
+      - action: utter_layoff
+
+  about_GPT_AI_will_take_IT_jobs:
+    description: Flow này để xử lý câu hỏi và trả lời những thắc mắc việc phát triển của AI có thể thay thế nhân sự trong ngành lập trình
+    nlu_trigger:
+      - intent:
+          name: GPT_AI_will_take_IT_jobs
+          confidence_threshold: 0.8
+    steps:
+      - action: utter_GPT_AI
