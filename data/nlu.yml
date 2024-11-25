@@ -115,6 +115,43 @@ nlu:
     - [Computer Science]{"entity": "nganh_it1"}  
     - [it1]{"entity": "nganh_it1"}
 
+- intent: ask_about_IT1_admissions
+  examples: |
+    - Ngành [Khoa Học Máy Tính]{"entity": "nganh_it1"} xét tuyển như thế nào?
+    - Phương thức xét tuyển ngành [IT1]{"entity": "nganh_it1"}
+    - Ngành [Khoa học máy tính]{"entity": "nganh_it1"} có những cách nào để xét tuyển?
+    - Điểm chuẩn ngành [IT1]{"entity": "nganh_it1"} là bao nhiêu?
+    - Tôi muốn biết điểm chuẩn ngành [Khoa Học Máy Tính]{"entity": "nganh_it1"}
+    - Chỉ tiêu tuyển sinh ngành [Khoa học máy tính]{"entity": "nganh_it1"} là bao nhiêu?
+    - Ngành [IT1]{"entity": "nganh_it1"} tuyển bao nhiêu chỉ tiêu trong năm nay?
+    - Ngành [Khoa Học Máy Tính]{"entity": "nganh_it1"} có xét tuyển bằng điểm thi THPT không?
+    - Ngành [IT1]{"entity": "nganh_it1"} có xét tuyển tài năng không?
+
+- intent: ask_about_IT1_education
+  examples: |
+    - Ngành [Khoa Học Máy Tính]{"entity": "nganh_it1"} đào tạo như thế nào?
+    - Chương trình học ngành [IT1]{"entity": "nganh_it1"} gồm những gì?
+    - Ngành [Khoa học máy tính]{"entity": "nganh_it1"} học bằng ngôn ngữ gì?
+    - Học phí của ngành [IT1]{"entity": "nganh_it1"} là bao nhiêu?
+    - Thời gian đào tạo ngành [Khoa Học Máy Tính]{"entity": "nganh_it1"} kéo dài bao lâu?
+    - Tốt nghiệp ngành [IT1]{"entity": "nganh_it1"} được cấp bằng gì?
+    - Ngành [Khoa học máy tính]{"entity": "nganh_it1"} có tích hợp đào tạo thạc sĩ không?
+    - Ngành [IT1]{"entity": "nganh_it1"} đào tạo trong bao lâu?
+    - Tôi muốn biết thông tin đào tạo ngành [Khoa học máy tính]{"entity": "nganh_it1"}
+
+- intent: ask_about_IT1_opportunities
+  examples: |
+    - Cơ hội việc làm ngành [Khoa Học Máy Tính]{"entity": "nganh_it1"} như thế nào?
+    - Ngành [IT1]{"entity": "nganh_it1"} ra trường làm nghề gì?
+    - Sinh viên ngành [Khoa học máy tính]{"entity": "nganh_it1"} có thể làm gì sau khi tốt nghiệp?
+    - Ngành [Khoa Học Máy Tính]{"entity": "nganh_it1"} có cơ hội làm việc tại các công ty lớn không?
+    - Ngành [IT1]{"entity": "nganh_it1"} có thể làm chuyên gia phát triển phần mềm không?
+    - Tốt nghiệp ngành [Khoa học máy tính]{"entity": "nganh_it1"} có thể làm ở đâu?
+    - Tôi muốn biết cơ hội nghề nghiệp của ngành [IT1]{"entity": "nganh_it1"}
+    - Ngành [Khoa Học Máy Tính]{"entity": "nganh_it1"} có cơ hội làm việc quốc tế không?
+    - Ngành [IT1]{"entity": "nganh_it1"} có thể làm chuyên gia giải pháp CNTT không?
+
+
 - intent: ask_about_IT2
   examples: |
     - Ngành [it2]{"entity": "nganh_it2"}
@@ -126,6 +163,42 @@ nlu:
     - [it2]{"entity": "nganh_it2"}
     - [computer engineering]{"entity": "nganh_it2"}
 
+- intent: ask_about_IT2_admissions
+  examples: |
+    - Ngành [Kỹ Thuật Máy Tính]{"entity": "nganh_it2"} xét tuyển như thế nào?
+    - Phương thức xét tuyển ngành [IT2]{"entity": "nganh_it2"}
+    - Ngành [Kỹ thuật máy tính]{"entity": "nganh_it2"} có những phương thức xét tuyển gì?
+    - Điểm chuẩn ngành [IT2]{"entity": "nganh_it2"} là bao nhiêu?
+    - Tôi muốn biết điểm chuẩn ngành [Kỹ Thuật Máy Tính]{"entity": "nganh_it2"}
+    - Chỉ tiêu tuyển sinh ngành [IT2]{"entity": "nganh_it2"} là bao nhiêu?
+    - Ngành [Kỹ Thuật Máy Tính]{"entity": "nganh_it2"} tuyển bao nhiêu chỉ tiêu trong năm nay?
+    - Ngành [IT2]{"entity": "nganh_it2"} có xét tuyển bằng điểm thi THPT không?
+    - Ngành [IT2]{"entity": "nganh_it2"} có xét tuyển tài năng không?
+  
+- intent: ask_about_IT2_education
+  examples: |
+    - Ngành [Kỹ Thuật Máy Tính]{"entity": "nganh_it2"} đào tạo như thế nào?
+    - Chương trình học ngành [IT2]{"entity": "nganh_it2"} gồm những gì?
+    - Ngành [Kỹ thuật máy tính]{"entity": "nganh_it2"} học bằng ngôn ngữ gì?
+    - Học phí của ngành [IT2]{"entity": "nganh_it2"} là bao nhiêu?
+    - Thời gian đào tạo ngành [Kỹ Thuật Máy Tính]{"entity": "nganh_it2"} kéo dài bao lâu?
+    - Tốt nghiệp ngành [IT2]{"entity": "nganh_it2"} được cấp bằng gì?
+    - Ngành [Kỹ Thuật Máy Tính]{"entity": "nganh_it2"} có tích hợp đào tạo thạc sĩ không?
+    - Ngành [IT2]{"entity": "nganh_it2"} đào tạo trong bao lâu?
+    - Tôi muốn biết thông tin đào tạo ngành [Kỹ Thuật Máy Tính]{"entity": "nganh_it2"}
+
+- intent: ask_about_IT2_opportunities
+  examples: |
+    - Cơ hội nghề nghiệp ngành [Kỹ Thuật Máy Tính]{"entity": "nganh_it2"} như thế nào?
+    - Ngành [IT2]{"entity": "nganh_it2"} ra trường làm việc ở đâu?
+    - Sinh viên ngành [Kỹ Thuật Máy Tính]{"entity": "nganh_it2"} có thể làm việc trong những lĩnh vực gì?
+    - Ngành [Kỹ Thuật Máy Tính]{"entity": "nganh_it2"} có cơ hội làm việc tại các công ty quốc tế không?
+    - Ngành [IT2]{"entity": "nganh_it2"} có thể làm việc trong lĩnh vực an toàn bảo mật hệ thống không?
+    - Ngành [Kỹ Thuật Máy Tính]{"entity": "nganh_it2"} có thể làm việc trong lĩnh vực thiết kế thiết bị thông minh không?
+    - Tôi muốn biết cơ hội nghề nghiệp của ngành [IT2]{"entity": "nganh_it2"}
+    - Ngành [IT2]{"entity": "nganh_it2"} có thể làm việc trong mạng máy tính và truyền thông không?
+    - Ngành [Kỹ Thuật Máy Tính]{"entity": "nganh_it2"} có thể làm việc trong lĩnh vực bảo mật không?
+  
 - intent: ask_about_ITe7
   examples: |
     - [it-e7]{"entity": "nganh_e7"}
@@ -136,6 +209,42 @@ nlu:
     - [ite7]{"entity": "nganh_e7"}
     - [ict]{"entity": "nganh_e7"}
 
+- intent: ask_about_ITe7_admissions
+  examples: |
+    - Ngành [Khoa học dữ liệu và trí tuệ nhân tạo]{"entity": "nganh_ite7"} xét tuyển như thế nào?
+    - Phương thức xét tuyển ngành [ITe7]{"entity": "nganh_ite7"}
+    - Ngành [Khoa học dữ liệu]{"entity": "nganh_ite7"} có những phương thức xét tuyển gì?
+    - Điểm chuẩn ngành [ITe7]{"entity": "nganh_ite7"} là bao nhiêu?
+    - Tôi muốn biết điểm chuẩn ngành [Khoa học dữ liệu]{"entity": "nganh_ite7"}
+    - Chỉ tiêu tuyển sinh ngành [ITe7]{"entity": "nganh_ite7"} là bao nhiêu?
+    - Ngành [ITe7]{"entity": "nganh_ite7"} tuyển bao nhiêu chỉ tiêu trong năm nay?
+    - Ngành [Khoa học dữ liệu]{"entity": "nganh_ite7"} có xét tuyển bằng điểm thi THPT không?
+    - Ngành [ITe7]{"entity": "nganh_ite7"} có xét tuyển tài năng không?
+  
+- intent: ask_about_ITe7_education
+  examples: |
+    - Ngành [Khoa học dữ liệu và trí tuệ nhân tạo]{"entity": "nganh_ite7"} đào tạo như thế nào?
+    - Chương trình học ngành [ITe7]{"entity": "nganh_ite7"} gồm những gì?
+    - Ngành [Khoa học dữ liệu]{"entity": "nganh_ite7"} học bằng ngôn ngữ gì?
+    - Học phí của ngành [ITe7]{"entity": "nganh_ite7"} là bao nhiêu?
+    - Thời gian đào tạo ngành [Khoa học dữ liệu]{"entity": "nganh_ite7"} kéo dài bao lâu?
+    - Tốt nghiệp ngành [ITe7]{"entity": "nganh_ite7"} được cấp bằng gì?
+    - Ngành [Khoa học dữ liệu]{"entity": "nganh_ite7"} có tích hợp đào tạo thạc sĩ không?
+    - Ngành [ITe7]{"entity": "nganh_ite7"} đào tạo trong bao lâu?
+    - Tôi muốn biết thông tin đào tạo ngành [Khoa học dữ liệu]{"entity": "nganh_ite7"}
+
+- intent: ask_about_ITe7_opportunities
+  examples: |
+    - Cơ hội nghề nghiệp ngành [Khoa học dữ liệu và trí tuệ nhân tạo]{"entity": "nganh_ite7"} như thế nào?
+    - Ngành [ITe7]{"entity": "nganh_ite7"} ra trường làm việc ở đâu?
+    - Sinh viên ngành [Khoa học dữ liệu]{"entity": "nganh_ite7"} có thể làm việc trong những lĩnh vực gì?
+    - Ngành [Khoa học dữ liệu]{"entity": "nganh_ite7"} có cơ hội làm việc tại các tổ chức quốc tế không?
+    - Ngành [ITe7]{"entity": "nganh_ite7"} có thể làm việc trong lĩnh vực nghiên cứu và phát triển AI không?
+    - Ngành [Khoa học dữ liệu]{"entity": "nganh_ite7"} có thể làm việc trong lĩnh vực phân tích dữ liệu không?
+    - Ngành [ITe7]{"entity": "nganh_ite7"} có cơ hội nghề nghiệp ở các tổ chức toàn cầu không?
+    - Sinh viên ngành [Khoa học dữ liệu]{"entity": "nganh_ite7"} có thể trở thành chuyên gia khoa học dữ liệu quốc tế không?
+    - Ngành [ITe7]{"entity": "nganh_ite7"} có thể làm việc trong nghiên cứu AI không?
+  
 - intent: ask_about_ITe6
   examples: |
     - [it-e6]{"entity": "nganh_e6"}
@@ -148,6 +257,37 @@ nlu:
     - [học bằng tiếng Nhật]{"entity": "nganh_e6"}
     - [hedspi]{"entity": "nganh_e6"}
 
+- intent: ask_about_ITe6_admissions
+  examples: |
+    - Ngành [CNTT Việt Nhật]{"entity": "nganh_ite6"} xét tuyển như thế nào?
+    - Phương thức xét tuyển ngành [ITe6]{"entity": "nganh_ite6"}
+    - Chỉ tiêu tuyển sinh của ngành [CNTT Việt Nhật]{"entity": "nganh_ite6"} là bao nhiêu?
+    - Ngành [ITe6]{"entity": "nganh_ite6"} xét tuyển theo những phương thức nào?
+    - Tôi muốn hỏi thông tin tuyển sinh ngành [CNTT Việt Nhật]{"entity": "nganh_ite6"}
+    - Điểm chuẩn ngành [ITe6]{"entity": "nganh_ite6"} là bao nhiêu?
+    - Ngành [ITe6]{"entity": "nganh_ite6"} tuyển bao nhiêu sinh viên?
+    - "Ngành [CNTT Việt Nhật]{"entity": "nganh_ite6"} yêu cầu điểm tối thiểu bao nhiêu?"
+
+- intent: ask_about_ITe6_education
+  examples: |
+    - Ngành [CNTT Việt Nhật]{"entity": "nganh_ite6"} đào tạo như thế nào?
+    - Chương trình đào tạo ngành [ITe6]{"entity": "nganh_ite6"}
+    - Ngành [CNTT Việt Nhật]{"entity": "nganh_ite6"} học bằng tiếng gì?
+    - Học phí của ngành [ITe6]{"entity": "nganh_ite6"} là bao nhiêu?
+    - Thời gian đào tạo ngành [CNTT Việt Nhật]{"entity": "nganh_ite6"} kéo dài bao lâu?
+    - Tốt nghiệp ngành [ITe6]{"entity": "nganh_ite6"} được cấp bằng gì?
+    - Ngành [CNTT Việt Nhật]{"entity": "nganh_ite6"} có tích hợp đào tạo thạc sĩ không?
+
+- intent: ask_about_ITe6_opportunities
+  examples: |
+    - Cơ hội việc làm ngành [CNTT Việt Nhật]{"entity": "nganh_ite6"} như thế nào?
+    - Ngành [ITe6]{"entity": "nganh_ite6"} ra làm gì?
+    - Tốt nghiệp ngành [CNTT Việt Nhật]{"entity": "nganh_ite6"} có thể làm nghề gì?
+    - Ngành [ITe6]{"entity": "nganh_ite6"} có cơ hội làm việc tại Nhật Bản không?
+    - Sinh viên ngành [CNTT Việt Nhật]{"entity": "nganh_ite6"} thường làm việc ở đâu?
+    - Ngành [ITe6]{"entity": "nganh_ite6"} có cơ hội phát triển quốc tế không?
+    - Tôi muốn biết cơ hội việc làm ngành [CNTT Việt Nhật]{"entity": "nganh_ite6"}
+  
 - intent: ask_about_ITe10
   examples: |
     - [it-e10]{"entity": "nganh_e10"}
@@ -163,6 +303,43 @@ nlu:
     - [DS_AI]{"entity": "nganh_e10"}
     - Học Trí tuệ nhân tạo thì học chương trình nào?
 
+- intent: ask_about_ITe10_admissions
+  examples: |
+    - Ngành [Khoa học dữ liệu và trí tuệ nhân tạo ITe10]{"entity": "nganh_ite10"} xét tuyển như thế nào?
+    - Phương thức xét tuyển ngành [ITe10]{"entity": "nganh_ite10"}
+    - Ngành [Khoa học dữ liệu ITe10]{"entity": "nganh_ite10"} có những phương thức xét tuyển gì?
+    - Điểm chuẩn ngành [ITe10]{"entity": "nganh_ite10"} là bao nhiêu?
+    - Chỉ tiêu tuyển sinh ngành [ITe10]{"entity": "nganh_ite10"} là bao nhiêu?
+    - Ngành [ITe10]{"entity": "nganh_ite10"} tuyển bao nhiêu chỉ tiêu trong năm nay?
+    - Ngành [Khoa học dữ liệu ITe10]{"entity": "nganh_ite10"} có xét tuyển bằng điểm thi THPT không?
+    - Ngành [ITe10]{"entity": "nganh_ite10"} có xét tuyển tài năng không?
+    - Xét tuyển ngành [Khoa học dữ liệu]{"entity": "nganh_ite10"} như thế nào?
+    - Bao nhiêu điểm thì đỗ [trí tuệ nhân tạo]{"entity":"nganh_ite10"}
+  
+- intent: ask_about_ITe10_education
+  examples: |
+    - Ngành [Khoa học dữ liệu và trí tuệ nhân tạo ITe10]{"entity": "nganh_ite10"} đào tạo như thế nào?
+    - Chương trình học ngành [ITe10]{"entity": "nganh_ite10"} gồm những gì?
+    - Ngành [Khoa học dữ liệu ITe10]{"entity": "nganh_ite10"} học bằng ngôn ngữ gì?
+    - Học phí ngành [ITe10]{"entity": "nganh_ite10"} là bao nhiêu?
+    - Thời gian đào tạo ngành [Khoa học dữ liệu ITe10]{"entity": "nganh_ite10"} kéo dài bao lâu?
+    - Tốt nghiệp ngành [ITe10]{"entity": "nganh_ite10"} được cấp bằng gì?
+    - Ngành [Khoa học dữ liệu ITe10]{"entity": "nganh_ite10"} có tích hợp đào tạo thạc sĩ không?
+    - Ngành [ITe10]{"entity": "nganh_ite10"} đào tạo trong bao lâu?
+    - Chương trình đào tạo ngành [Khoa học dữ liệu ITe10]{"entity": "nganh_ite10"} có gì đặc biệt?
+  
+- intent: ask_about_ITe10_opportunities
+  examples: |
+    - Cơ hội nghề nghiệp ngành [Khoa học dữ liệu và trí tuệ nhân tạo ITe10]{"entity": "nganh_ite10"} như thế nào?
+    - Ngành [ITe10]{"entity": "nganh_ite10"} ra trường làm việc ở đâu?
+    - Sinh viên ngành [Khoa học dữ liệu ITe10]{"entity": "nganh_ite10"} có thể làm việc trong những lĩnh vực gì?
+    - Ngành [Khoa học dữ liệu ITe10]{"entity": "nganh_ite10"} có cơ hội làm việc tại các tổ chức quốc tế không?
+    - Sinh viên ngành [Khoa học dữ liệu ITe10]{"entity": "nganh_ite10"} có thể trở thành nhà khoa học dữ liệu không?
+    - Ngành [ITe10]{"entity": "nganh_ite10"} có thể làm việc trong lĩnh vực phát triển AI không?
+    - Ngành [Khoa học dữ liệu ITe10]{"entity": "nganh_ite10"} có thể làm việc trong lĩnh vực phân tích hệ thống thông minh không?
+    - Sinh viên ngành [Khoa học dữ liệu ITe10]{"entity": "nganh_ite10"} có thể làm việc tại các công ty công nghệ lớn không?
+    - Ngành [ITe10]{"entity": "nganh_ite10"} có thể làm việc tại các công ty nghiên cứu AI không?
+  
 - intent: ask_about_ITe15
   examples: |
     - [it-e15]{"entity": "nganh_e15"}
@@ -174,6 +351,41 @@ nlu:
     - [an toàn không gian số]{"entity": "nganh_e15"}
     - [ite15]{"entity": "nganh_e15"}
     
+- intent: ask_about_ITe15_admissions
+  examples: |
+    - Ngành [An toàn thông tin ITe15]{"entity": "nganh_ite15"} xét tuyển như thế nào?
+    - Phương thức xét tuyển ngành [ITe15]{"entity": "nganh_ite15"}
+    - Ngành [An toàn thông tin ITe15]{"entity": "nganh_ite15"} có xét tuyển tài năng không?
+    - Điểm chuẩn ngành [ITe15]{"entity": "nganh_ite15"} là bao nhiêu?
+    - Chỉ tiêu tuyển sinh ngành [ITe15]{"entity": "nganh_ite15"} là bao nhiêu?
+    - Ngành [ITe15]{"entity": "nganh_ite15"} có xét tuyển bằng điểm thi THPT không?
+    - Xét tuyển ngành [An toàn thông tin ITe15]{"entity": "nganh_ite15"} như thế nào?
+    - Ngành [An toàn thông tin ITe15]{"entity": "nganh_ite15"} có xét tuyển bằng điểm thi Đánh giá tư duy không?
+  
+- intent: ask_about_ITe15_education
+  examples: |
+    - Ngành [An toàn thông tin ITe15]{"entity": "nganh_ite15"} đào tạo như thế nào?
+    - Chương trình học ngành [ITe15]{"entity": "nganh_ite15"} gồm những gì?
+    - Ngành [An toàn thông tin ITe15]{"entity": "nganh_ite15"} học bằng ngôn ngữ gì?
+    - Học phí ngành [ITe15]{"entity": "nganh_ite15"} là bao nhiêu?
+    - Thời gian đào tạo ngành [An toàn thông tin ITe15]{"entity": "nganh_ite15"} kéo dài bao lâu?
+    - Tốt nghiệp ngành [ITe15]{"entity": "nganh_ite15"} được cấp bằng gì?
+    - Ngành [An toàn thông tin ITe15]{"entity": "nganh_ite15"} có tích hợp đào tạo thạc sĩ không?
+    - Ngành [ITe15]{"entity": "nganh_ite15"} đào tạo trong bao lâu?
+    - Chương trình đào tạo ngành [An toàn thông tin ITe15]{"entity": "nganh_ite15"} có gì đặc biệt?
+  
+- intent: ask_about_ITe15_opportunities
+  examples: |
+    - Cơ hội nghề nghiệp ngành [An toàn thông tin ITe15]{"entity": "nganh_ite15"} như thế nào?
+    - Ngành [ITe15]{"entity": "nganh_ite15"} ra trường làm việc ở đâu?
+    - Sinh viên ngành [An toàn thông tin ITe15]{"entity": "nganh_ite15"} có thể làm việc trong những lĩnh vực gì?
+    - Ngành [An toàn thông tin ITe15]{"entity": "nganh_ite15"} có cơ hội làm việc tại các tổ chức quốc tế không?
+    - Sinh viên ngành [An toàn thông tin ITe15]{"entity": "nganh_ite15"} có thể trở thành chuyên gia an toàn không gian mạng không?
+    - Ngành [ITe15]{"entity": "nganh_ite15"} có thể làm việc trong lĩnh vực bảo mật hệ thống không?
+    - Ngành [An toàn thông tin ITe15]{"entity": "nganh_ite15"} có thể làm việc trong lĩnh vực điều tra tấn công mạng không?
+    - Sinh viên ngành [An toàn thông tin ITe15]{"entity": "nganh_ite15"} có thể làm việc tại các công ty công nghệ lớn không?
+    - Ngành [ITe15]{"entity": "nganh_ite15"} có thể làm việc trong lĩnh vực bảo mật mạng không?
+  
 - intent: compare_it1_it2
   examples: |
     - so sánh it1 với it2

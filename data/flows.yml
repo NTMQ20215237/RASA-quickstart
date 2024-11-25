@@ -5,8 +5,25 @@ flows:
       - collect: recipient
       - collect: amount
         description: the number of US dollars to send
+      - action: action_check_sufficient_funds
+        next:
+          - if: not slots.has_sufficient_funds
+            then:
+              - action: utter_insufficient_funds
+                next: END
+          - else: final_confirmation
+      - collect: final_confirmation
+        id: final_confirmation        
+        next:
+          - if: not slots.final_confirmation
+            then:
+              - action: utter_transfer_cancelled
+                next: END
+          - else: transfer_successful
       - action: utter_transfer_complete
-    
+        id: transfer_successful
+
+
   general:
     description: Flow này để xử lý câu hỏi về general và trả lời về general
     nlu_trigger:
@@ -25,6 +42,33 @@ flows:
     steps:
       - action: utter_about_IT1
 
+  IT1_admissions:
+    description: Flow này để hỏi các thông tin về điểm chuẩn, chỉ tiêu tuyển sinh và phương thức xét tuyển của ngành IT1
+    nlu_trigger:
+      - intent:
+          name: ask_about_IT1_admissions
+          confidence_threshold: 0.8
+    steps:
+      - action: utter_IT1_admissions
+
+  IT1_education:
+    description: Flow này để hỏi các thông tin về thông tin đào tạo, cụ thể là thời gian đào tạo, học phí và bằng tốt nghiệp của ngành IT1
+    nlu_trigger:
+      - intent:
+          name: ask_about_IT1_education
+          confidence_threshold: 0.8
+    steps:
+      - action: utter_IT1_education
+
+  IT1_opportunities:
+    description: Flow này để hỏi các thông tin về cơ hội nghề nghiệp của ngành IT1
+    nlu_trigger:
+      - intent:
+          name: ask_about_IT1_opportunities
+          confidence_threshold: 0.8
+    steps:
+      - action: utter_IT1_opportunities
+
   IT2:
     description: Flow này để xử lý câu hỏi về thông tin ngành IT2 và trả lời
     nlu_trigger:
@@ -33,6 +77,33 @@ flows:
           confidence_threshold: 0.8
     steps:
       - action: utter_about_IT2
+
+  IT2_admissions:
+    description: Flow này để hỏi các thông tin về điểm chuẩn, chỉ tiêu tuyển sinh và phương thức xét tuyển của ngành IT2
+    nlu_trigger:
+      - intent:
+          name: ask_about_IT2_admissions
+          confidence_threshold: 0.8
+    steps:
+      - action: utter_IT2_admissions
+
+  IT2_education:
+    description: Flow này để hỏi các thông tin về thông tin đào tạo, cụ thể là thời gian đào tạo, học phí và bằng tốt nghiệp của ngành IT2
+    nlu_trigger:
+      - intent:
+          name: ask_about_IT2_education
+          confidence_threshold: 0.8
+    steps:
+      - action: utter_IT2_education
+
+  IT2_opportunities:
+    description: Flow này để hỏi các thông tin về cơ hội nghề nghiệp của ngành IT2
+    nlu_trigger:
+      - intent:
+          name: ask_about_IT2_opportunities
+          confidence_threshold: 0.8
+    steps:
+      - action: utter_IT2_opportunities
 
   ITe7:
     description: Flow này để xử lý câu hỏi về thông tin ngành ITe7 và trả lời
@@ -43,6 +114,33 @@ flows:
     steps:
       - action: utter_about_ITe7
 
+  ITe7_admissions:
+    description: Flow này để hỏi các thông tin về điểm chuẩn, chỉ tiêu tuyển sinh và phương thức xét tuyển của ngành ITe7
+    nlu_trigger:
+      - intent:
+          name: ask_about_ITe7_admissions
+          confidence_threshold: 0.8
+    steps:
+      - action: utter_ITe7_admissions
+
+  ITe7_education:
+    description: Flow này để hỏi các thông tin về thông tin đào tạo, cụ thể là thời gian đào tạo, học phí và bằng tốt nghiệp của ngành ITe7
+    nlu_trigger:
+      - intent:
+          name: ask_about_ITe7_education
+          confidence_threshold: 0.8
+    steps:
+      - action: utter_ITe7_education
+
+  ITe7_opportunities:
+    description: Flow này để hỏi các thông tin về cơ hội nghề nghiệp của ngành ITe7
+    nlu_trigger:
+      - intent:
+          name: ask_about_ITe7_opportunities
+          confidence_threshold: 0.8
+    steps:
+      - action: utter_ITe7_opportunities
+
   ITe6:
     description: Flow này để xử lý câu hỏi về thông tin ngành ITe6(Global ICT/ Công Nghệ Thông Tin Toàn Cầu) và trả lời
     nlu_trigger:
@@ -51,6 +149,33 @@ flows:
           confidence_threshold: 0.8
     steps:
       - action: utter_about_ITe6
+
+  ITe6_admissions:
+    description: Flow này để hỏi các thông tin về điểm chuẩn, chỉ tiêu tuyển sinh và phương thức xét tuyển của ngành ITe6
+    nlu_trigger:
+      - intent:
+          name: ask_about_ITe6_admissions
+          confidence_threshold: 0.8
+    steps:
+      - action: utter_ITe6_admissions
+
+  ITe6_education:
+    description: Flow này để hỏi các thông tin về thông tin đào tạo, cụ thể là thời gian đào tạo, học phí và bằng tốt nghiệp của ngành ITe6
+    nlu_trigger:
+      - intent:
+          name: ask_about_ITe6_education
+          confidence_threshold: 0.8
+    steps:
+      - action: utter_ITe6_education
+
+  ITe6_opportunities:
+    description: Flow này để hỏi các thông tin về cơ hội nghề nghiệp của ngành ITe6
+    nlu_trigger:
+      - intent:
+          name: ask_about_ITe6_opportunities
+          confidence_threshold: 0.8
+    steps:
+      - action: utter_ITe6_opportunities
 
   ITe10:
     description: Flow này để xử lý câu hỏi về thông tin ngành ITe10 và trả lời
@@ -61,6 +186,33 @@ flows:
     steps:
       - action: utter_about_ITe10
 
+  ITe10_admissions:
+    description: Flow này để hỏi các thông tin về điểm chuẩn, chỉ tiêu tuyển sinh và phương thức xét tuyển của ngành ITe10
+    nlu_trigger:
+      - intent:
+          name: ask_about_ITe10_admissions
+          confidence_threshold: 0.8
+    steps:
+      - action: utter_ITe10_admissions
+
+  ITe10_education:
+    description: Flow này để hỏi các thông tin về thông tin đào tạo, cụ thể là thời gian đào tạo, học phí và bằng tốt nghiệp của ngành ITe10
+    nlu_trigger:
+      - intent:
+          name: ask_about_ITe10_education
+          confidence_threshold: 0.8
+    steps:
+      - action: utter_ITe10_education
+
+  ITe10_opportunities:
+    description: Flow này để hỏi các thông tin về cơ hội nghề nghiệp của ngành ITe10
+    nlu_trigger:
+      - intent:
+          name: ask_about_ITe10_opportunities
+          confidence_threshold: 0.8
+    steps:
+      - action: utter_ITe10_opportunities
+
   ITe15:
     description: Flow này để xử lý câu hỏi về thông tin ngành ITe15 và trả lời
     nlu_trigger:
@@ -69,6 +221,33 @@ flows:
           confidence_threshold: 0.8
     steps:
       - action: utter_about_ITe15
+
+  ITe15_admissions:
+    description: Flow này để hỏi các thông tin về điểm chuẩn, chỉ tiêu tuyển sinh và phương thức xét tuyển của ngành ITe15
+    nlu_trigger:
+      - intent:
+          name: ask_about_ITe15_admissions
+          confidence_threshold: 0.8
+    steps:
+      - action: utter_ITe15_admissions
+
+  ITe15_education:
+    description: Flow này để hỏi các thông tin về thông tin đào tạo, cụ thể là thời gian đào tạo, học phí và bằng tốt nghiệp của ngành ITe15
+    nlu_trigger:
+      - intent:
+          name: ask_about_ITe15_education
+          confidence_threshold: 0.8
+    steps:
+      - action: utter_ITe15_education
+
+  ITe15_opportunities:
+    description: Flow này để hỏi các thông tin về cơ hội nghề nghiệp của ngành ITe15
+    nlu_trigger:
+      - intent:
+          name: ask_about_ITe15_opportunities
+          confidence_threshold: 0.8
+    steps:
+      - action: utter_ITe15_opportunities
 
   compare_it1_it2:
     description: Flow này để xử lý câu hỏi và trả lời về yêu cầu so sánh ngành IT1(Khoa học máy tính) và IT2 (Kỹ thuật máy tính)

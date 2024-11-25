@@ -1,5 +1,8 @@
 version: "3.1"
 
+actions:
+  - action_check_sufficient_funds
+
 slots:
   recipient:
     type: text
@@ -9,15 +12,41 @@ slots:
     type: float
     mappings:
       - type: from_llm
+  final_confirmation:
+    type: bool
+    mappings:
+      - type: from_llm
+  has_sufficient_funds:
+    type: bool
+    mappings:
+      - type: custom
 
 intents:
   - ask_about_general
   - ask_about_IT1
+  - ask_about_IT1_admissions
+  - ask_about_IT1_education
+  - ask_about_IT1_opportunities
   - ask_about_IT2
+  - ask_about_IT2_admissions
+  - ask_about_IT2_education
+  - ask_about_IT2_opportunities
   - ask_about_ITe7
+  - ask_about_ITe7_admissions
+  - ask_about_ITe7_education
+  - ask_about_ITe7_opportunities
   - ask_about_ITe6
+  - ask_about_ITe6_admissions
+  - ask_about_ITe6_education
+  - ask_about_ITe6_opportunities
   - ask_about_ITe10
+  - ask_about_ITe10_admissions
+  - ask_about_ITe10_education
+  - ask_about_ITe10_opportunities
   - ask_about_ITe15
+  - ask_about_ITe15_admissions
+  - ask_about_ITe15_education
+  - ask_about_ITe15_opportunities
   - compare_it1_it2
   - compare_ite6_ite7
   - block_D07_has_IT_or_not
@@ -39,6 +68,15 @@ responses:
 
   utter_transfer_complete:
     - text: "All done. {amount} has been sent to {recipient}."
+  
+  utter_ask_final_confirmation:
+    - text: "Please confirm: you want to transfer {amount} to {recipient}?"
+
+  utter_transfer_cancelled:
+    - text: "Your transfer has been cancelled."
+  
+  utter_insufficient_funds:
+    - text: "You do not have enough funds to make this transaction."
   
   utter_about_general:
     - text: "Trong lĩnh vực công nghệ thông tin của ĐHBK Hà Nội,Trường ĐHBK Hà Nội có tổng cộng 6 mã xét tuyển ngành CNTT, gồm có:\n
@@ -72,6 +110,30 @@ Công nghệ thông tin - Khoa học máy tính (với các định hướng: C�
 Ngành đào tạo\n
 Đào tạo nhân lực chất lượng cao cho ngành Khoa học Máy tính theo một trong hai định hướng: Công nghệ Phần mềm và Hệ thống Thông tin. Sinh viên sau khi tốt nghiệp có kiến thức cốt lõi ngành, có khả năng vận dụng kiến thức chuyên sâu để phân tích thiết kế, xây dựng và phát triển các giải pháp phần mềm, cũng như các hệ thống thông tin thông minh.\n"
 
+  utter_IT1_admissions:
+  - text: "
+      **Phương thức xét tuyển:**\n
+      - Xét tuyển tài năng: HSG QG-QT/Chứng chỉ Quốc tế/HSNL\n
+      - Xét tuyển điểm thi Đánh giá tư duy (K00): Điểm chuẩn: 83.90\n
+      - Xét tuyển điểm thi THPT (A00, A01): Điểm chuẩn: 29.42\n
+      **Chỉ tiêu tuyển sinh:** 300 (năm 2023)\n
+"
+  utter_IT1_education:
+  - text: "
+      **Thông tin đào tạo:**\n
+      - Ngôn ngữ: Tiếng Việt\n
+      - Thời gian đào tạo: 4 - 5,5 năm\n
+      - Học phí: 22 - 28 triệu đồng/năm\n
+      - Tốt nghiệp: Cử nhân - Thạc sĩ tích hợp\n
+"
+  utter_IT1_opportunities:
+  - text: "
+      **Cơ hội nghề nghiệp:**\n
+      Sinh viên tốt nghiệp ngành này có thể trở thành:\n
+      - Chuyên gia phát triển phần mềm\n
+      - Chuyên gia thiết kế giải pháp CNTT\n
+      - Chuyên gia hệ thống thông tin thông minh\n
+"
   utter_about_IT2:
   - text: "KỸ THUẬT MÁY TÍNH (IT2) là ngành học quan trọng, độc đáo, và duy nhất trong lĩnh vực CNTT tại ĐHBK HN cung cấp cho người học kiến thức chuyên môn cả về phần cứng, phần mềm và các kỹ thuật thiết kế và tích hợp tối ưu giữa phần cứng và phần mềm. Với các kiến thức được học, người học có khả năng trở thành chuyên gia về mạng máy tính, an toàn bảo mật hệ thống, cũng như chuyên gia thiết kế, chế tạo các hệ thống thiết bị thông minh, như: smart phone, các hệ thống IoT thông minh, các thiết bị smart home, và các giải pháp smart city \n
  Ngôn ngữ đào tạo: Tiếng Việt\n
@@ -96,6 +158,30 @@ Ngành đào tạo:\n
 \n
 Sinh viên tốt nghiệp chuyên ngành Kỹ thuật máy tính có kỹ năng phát triển toàn diện một giải pháp hoàn chỉnh cả phần cứng và phần mềm, đặc biệt chú trọng đến khả năng tích hợp tối ưu giữa phần cứng và phần mềm trong một hệ thống."
 
+  utter_IT2_admissions:
+  - text: "
+      **Phương thức xét tuyển:**\n
+      - Xét tuyển tài năng: HSG QG-QT/Chứng chỉ Quốc tế/HSNL\n
+      - Xét tuyển điểm thi Đánh giá tư duy (K00): Điểm chuẩn: 79.22\n
+      - Xét tuyển điểm thi THPT (A00, A01): Điểm chuẩn: 28.29\n
+      **Chỉ tiêu tuyển sinh:** 200 (năm 2023)\n
+"
+  utter_IT2_education:
+  - text: "
+      **Thông tin đào tạo:**\n
+      - Ngôn ngữ: Tiếng Việt\n
+      - Thời gian đào tạo: 4 - 5,5 năm\n
+      - Học phí: 22 - 28 triệu đồng/năm\n
+      - Tốt nghiệp: Cử nhân - Thạc sĩ tích hợp\n
+"
+  utter_IT2_opportunities:
+  - text: "
+      **Cơ hội nghề nghiệp:**\n
+      Sinh viên tốt nghiệp ngành này có thể làm việc trong lĩnh vực:\n
+      - Thiết kế và chế tạo thiết bị thông minh\n
+      - An toàn bảo mật hệ thống\n
+      - Mạng máy tính và truyền thông\n
+"
   utter_about_ITe7:
   - text: "(GLOBAL ICT) CHƯƠNG TRÌNH ĐÀO TẠO TOÀN CẦU VỀ CNTT BẰNG TIẾNG ANH là chương trình tiên tiến và có tính quốc tế hóa nhất trong các ngành đào tạo Công nghệ thông tin tại ĐHBK Hà Nôi. 100% môn học được dạy và học bằng Tiếng Anh, với sự tham gia của giảng viên và sinh viên quốc tế. Sinh viên ra trường có định hướng việc làm tại thị trường lao động quốc tế. Ngoài ra, sinh viên có cơ hội lớn tham gia vào các chương trình trao đổi sinh viên, chuyển tiếp với các đại học hàng đầu Thế giới.\n
 Ngôn ngữ đào tạo: Tiếng Anh\n
@@ -117,6 +203,28 @@ Học phí: 40 - 45 triệu đồng/năm
 Thí sinh có thể vào các trang thông tin sau để trao đổi, giao lưu và xin thêm ý kiến của các sinh viên khóa trước của Chương trình:\n
 - Facebook page của Chương trình: https://www.facebook.com/GlobalICTBachKhoa/\n
 - Facebook group của sinh viên các thế hệ: https://www.facebook.com/groups/promo.ict.hust"
+
+  utter_ITe7_admissions:
+  - text: "
+      **Phương thức xét tuyển:**\n
+      - Xét tuyển tài năng: HSG QG-QT/Chứng chỉ Quốc tế/HSNL\n
+      - Xét tuyển điểm thi Đánh giá tư duy (K00): Điểm chuẩn: 79.12\n
+      - Xét tuyển điểm thi THPT (A00, A01): Điểm chuẩn: 28.16\n
+      **Chỉ tiêu tuyển sinh:** 100 (năm 2023)\n
+"
+  utter_ITe7_education:
+  - text: "**Thông tin đào tạo:**\n
+      - Ngôn ngữ: Tiếng Anh\n
+      - Thời gian đào tạo: 4 - 5,5 năm\n
+      - Học phí: 40 - 45 triệu đồng/năm\n
+      - Tốt nghiệp: Cử nhân - Thạc sĩ tích hợp\n
+"
+  utter_ITe7_opportunities:
+  - text: "**Cơ hội nghề nghiệp:**\n
+      Sinh viên tốt nghiệp ngành này có thể trở thành:\n
+      - Chuyên gia khoa học dữ liệu quốc tế\n
+      - Nhà nghiên cứu và phát triển AI\n
+      - Chuyên gia phân tích dữ liệu tại các tổ chức lớn trên toàn cầu"
 
   utter_about_ITe6:
   - text: "CÔNG NGHỆ THÔNG TIN VIỆT NHẬT (HEDSPI) là chương trình mà sinh viên ra Trường có mức lương trung bình cao nhất trong các ngành đào tạo liên quan đến CNTT của ĐHBK Hà Nội. 70% sinh viên tốt nghiệp sang làm việc tại Nhật Bản, và hiện tại, CNTT Việt Nhật (HEDSPI) đã trở thành một thương hiệu rất uy tín tại thị trường lao động Nhật Bản.\n
@@ -140,6 +248,30 @@ CHƯƠNG TRÌNH ĐÀO TẠO ELITECH\n
 Trong khuôn khổ Dự án Hỗ trợ Phát triển Đào tạo Đại học và Sau Đại học về CNTT&TT (Dự án HEDSPI) hợp tác giữa Chính phủ hai nước Việt Nam và Nhật Bản, vào năm 2006, ĐHBK Hà Nội mở Chương trình kỹ sư CNTT Việt Nhật (gọi tắt là: Chương trình CNTT HEDSPI) đào tạo các kỹ sư CNTT có trình độ tương đương với các kỹ sư được đào tạo tại các trường đại học CNTT tại Nhật Bản. Từ năm 2021, chương trình kỹ sư CNTT Việt Nhật chuyển sang mô hình đào tạo tích hợp. Sinh viên sau khi tốt nghiệp cử nhân có thể tốt nghiệp lấy bằng cử nhân, hoặc học chuyển tiếp lên hệ kỹ sư và thạc sỹ.\n
 Sau khi tốt nghiệp, các cử nhân CNTT HEDSPI có thể được tuyển dụng sang Nhật Bản làm việc ngay với vị trí công việc và mức thu nhập tương đương các cử nhân CNTT Nhật Bản. Riêng về ngoại ngữ Tiếng Nhật, trong quá trình học sinh viên được học trực tiếp từ giảng viên người Nhật, thêm vào đó, nhiều môn chuyên ngành cũng được giảng dạy bởi các giáo sư và chuyên gia Nhật Bản đến từ các trường đại học và doanh nghiệp uy tín, điều này đảm bảo sinh viên có trình độ ngoại ngữ đủ để làm việc tại Nhật Bản."
 
+  utter_ITe6_admissions:
+  - text: "
+      **Phương thức xét tuyển:**\n
+      - Xét tuyển tài năng: HSG QG-QT/Chứng chỉ Quốc tế/HSNL\n
+      - Xét tuyển điểm thi Đánh giá tư duy (K00): Điểm chuẩn: 72.03\n
+      - Xét tuyển điểm thi THPT (A00, A01, D28): Điểm chuẩn: 27.64\n
+      **Chỉ tiêu tuyển sinh:** 240 (năm 2023)\n
+"
+  utter_ITe6_education:
+  - text: "
+      **Thông tin đào tạo:**\n
+      - Ngôn ngữ: Tiếng Nhật tăng cường\n
+      - Thời gian đào tạo: 4 - 5,5 năm\n
+      - Học phí: 40 - 45 triệu đồng/năm\n
+      - Tốt nghiệp: Cử nhân - Thạc sĩ tích hợp\n
+"
+  utter_ITe6_opportunities:
+  - text: "
+      **Cơ hội nghề nghiệp:**\n
+      Sinh viên tốt nghiệp ngành này có thể trở thành:\n
+      - Chuyên gia CNTT làm việc tại Nhật Bản\n
+      - Nhà phát triển phần mềm quốc tế\n
+      - Quản lý dự án CNTT tại các tập đoàn đa quốc gia\n
+"
   utter_about_ITe10:
   - text: "Chương trình tiên tiến Khoa học Dữ liệu và Trí tuệ Nhân tạo (Data Science and AI): Là chương trình mới đầu tiên tại VN ở bậc ĐH  đáp ứng nhu cầu nhân lực trong một ngành là trụ cột của Công nghiệp 4.0 \n
   
@@ -160,6 +292,32 @@ Tốt nghiệp: Cử nhân - Thạc sĩ\n
 Thời gian tuyển sinh: Tháng 4 - 8 hàng năm\n
 Thời gian đào tạo: 4 - 6 năm\n
 Học phí: 50 - 60 triệu đồng/năm"
+
+  utter_ITe10_admissions:
+  - text: |
+      **Phương thức xét tuyển:**
+      - Xét tuyển tài năng: HSG QG-QT/Chứng chỉ Quốc tế/HSNL
+      - Xét tuyển điểm thi Đánh giá tư duy (K00):
+      - ***Điểm chuẩn: 83.97***
+      - Xét tuyển điểm thi THPT (A00, A01): 
+      - ***Điểm chuẩn: 28.8***
+      **Chỉ tiêu tuyển sinh:** 100 (năm 2023)
+
+  utter_ITe10_education:
+  - text: |
+      **Thông tin đào tạo:**
+      - Ngôn ngữ: Tiếng Anh
+      - Thời gian đào tạo: 4 - 6 năm
+      - Học phí: 50 - 60 triệu đồng/năm
+      - Tốt nghiệp: Cử nhân - Thạc sĩ
+
+  utter_ITe10_opportunities:
+  - text: |
+      **Cơ hội nghề nghiệp:**
+      Sinh viên tốt nghiệp ngành này có thể trở thành:
+      - Nhà khoa học dữ liệu
+      - Chuyên gia phát triển AI
+      - Nhà phân tích hệ thống thông minh
 
   utter_about_ITe15:
   - text: "An toàn không gian số (Chương trình tiên tiến) (IT-E15) là chương trình mới  đầu tiên tại Việt Nam ở bậc Đại học  định hướng đào tạo chuyên gia trong lĩnh vực An toàn Không gian số. Chương trình được thiết kế bởi các giáo sư hàng đầu trong nước và quốc tế, có sự phối hợp với những tập đoàn công nghệ lớn như Bkav, IBM. 100% môn học được dạy bằng Tiếng Anh, với hệ thống bài thí nghiệm và thực hành theo tiêu chuẩn quốc tế nhằm đào tạo ra các chuyên gia trình độ cao, đáp ứng nhu cầu nhân lực của Công nghiệp 4.0 và Chiến lược Chuyển đổi số Quốc gia.\n
@@ -182,6 +340,30 @@ Học phí: 40 - 45 triệu đồng/năm\n
 Chương trình có mục đích đào tạo các chuyên gia trình độ cao về An toàn Không gian số (Cyber Security). Chương trình được các chuyên gia hàng đầu trong lĩnh vực của Việt Nam và trên Thế giới thiết kế. Với định hướng đào tạo chuyên gia, sinh viên tham gia chương trình được trang bị đầy đủ kiến thức hàn lâm, song song với việc được chú trọng gia tăng thời lượng thực hành, cũng như học thông qua trải nghiệm tại hệ thống các phòng lab nghiên cứu, cũng như tại các công ty, tập đoàn hoạt động trong lĩnh vực CNTT&TT nói chung và Cyber Security nói riêng trong và ngoài nước.\n
 Sinh viên các năm cuối sẽ được hướng dẫn bởi các chuyên gia là cựu sinh viên của Trường CNTT&TT đang làm việc tại các Tập đoàn công nghệ hàng đầu như: Bkav, IBM, Thales… để vừa nâng cao kiến thức, vừa bổ sung thêm các kỹ năng làm việc chuyên nghiệp, nghiên cứu theo chuẩn quốc tế, hướng tới thị trường lao động toàn cầu, cũng như bồi đắp tinh thần đổi mới sáng tạo và khởi nghiệp.\n
 Hạ tầng phục vụ thực hành của sinh viên bao gồm hệ thống ảo hóa với các bài thực hành từ cơ bản đến nâng cao, hệ thống diễn tập ứng cứu sự cố, hệ thống thao trường huấn luyện tấn công, phòng thủ, được trang bị theo thỏa thuận hợp tác chiến lược với Tập đoàn Bkav và được đầu tư thông qua dự án KOICA IBS (Hàn Quốc). Sinh viên được trải nghiệm các công nghệ là nền tảng đảm bảo an toàn cho hệ thống thông tin của doanh nghiệp và của Chính phủ điện tử."
+
+  utter_ITe15_admissions:
+  - text: |
+      **Phương thức xét tuyển:**
+      - Xét tuyển tài năng: HSG QG-QT/Chứng chỉ Quốc tế/HSNL
+      - Xét tuyển điểm thi Đánh giá tư duy (K00): Điểm chuẩn: 76.61
+      - Xét tuyển điểm thi THPT (A00, A01): Điểm chuẩn: 28.05
+      **Chỉ tiêu tuyển sinh:** 40 (năm 2023)
+
+  utter_ITe15_education:
+  - text: |
+      **Thông tin đào tạo:**
+      - Ngôn ngữ: Tiếng Anh
+      - Thời gian đào tạo: 4 - 5,5 năm (Cử nhân), 5,5 năm (Thạc sĩ)
+      - Học phí: 40 - 45 triệu đồng/năm
+      - Tốt nghiệp: Cử nhân - Thạc sĩ tích hợp
+
+  utter_ITe15_opportunities:
+  - text: |
+      **Cơ hội nghề nghiệp:**
+      Sinh viên tốt nghiệp ngành này có thể trở thành:
+      - Chuyên gia an toàn không gian mạng
+      - Nhà quản lý bảo mật hệ thống
+      - Chuyên viên điều tra tấn công mạng
 
   utter_compare_it1_it2:
   - text: "Về ngành IT1 và IT2: \n
